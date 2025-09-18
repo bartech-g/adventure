@@ -1,0 +1,9 @@
+ID,name,descr,department_ID,createdAt,createdBy,modifiedAt,modifiedBy
+a1,Navigator,Charts routes and wormholes,1
+a2,Helmsman,Pilots the ship,1
+b1,Astrophysicist,Studies cosmic phenomena,2
+b2,Biologist,Analyzes extraterrestrial life,2
+c1,Engineer,Maintains critical systems,3
+c2,Systems Technician,Diagnostics and repair,3
+d1,Communications Officer,Handles interstellar comms,4
+d2,Linguist,Translates alien languages,4

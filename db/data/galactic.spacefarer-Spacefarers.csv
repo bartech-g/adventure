@@ -1,0 +1,9 @@
+ID,firstName,lastName,stardustCollection,wormholeNavigationSkill,originPlanet,spacesuitColor,department_ID,position_ID,createdAt,createdBy,modifiedAt,modifiedBy
+000000000001,Orion,Arcanum,18,7,Mars,Red,1,a1
+000000000002,Nyx,Nebula,12,6,Venus,Blue,1,a2
+000000000003,Quasar,Queen,25,9,Jupiter,White,2,b1
+000000000004,Vacuum,Vortex,9,4,Saturn,Black,3,c1
+000000000005,Nova,Warden,7,5,Mercury,Orange,4,d1
+000000000006,Horizon,Sentinel,14,6,Earth,Silver,2,b2
+000000000007,Ion,Tempest,11,5,Neptune,Green,3,c2
+000000000008,Rift,Ranger,20,8,Uranus,Gold,4,d2
