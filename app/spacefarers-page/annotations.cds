@@ -33,6 +33,16 @@ annotate service.Spacefarers with @(
                 Label : 'spacesuitColor',
                 Value : spacesuitColor,
             },
+            {
+                $Type : 'UI.DataField',
+                Value : department_ID,
+                Label : 'department',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : position_ID,
+                Label : 'position',
+            },
         ],
     },
     UI.Facets : [
@@ -69,50 +79,66 @@ annotate service.Spacefarers with @(
             Label : 'originPlanet',
             Value : originPlanet,
         },
+        {
+            $Type : 'UI.DataField',
+            Value : department_ID,
+            Label : 'department',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : position_ID,
+            Label : 'position',
+        },
     ],
 );
 
 annotate service.Spacefarers with {
-    department @Common.ValueList : {
-        $Type : 'Common.ValueListType',
-        CollectionPath : 'Departments',
-        Parameters : [
-            {
-                $Type : 'Common.ValueListParameterInOut',
-                LocalDataProperty : department_ID,
-                ValueListProperty : 'ID',
-            },
-            {
-                $Type : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty : 'name',
-            },
-            {
-                $Type : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty : 'descr',
-            },
-        ],
-    }
+    department @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Departments',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : department_ID,
+                    ValueListProperty : 'ID',
+                },
+                {
+                    $Type : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty : 'name',
+                },
+                {
+                    $Type : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty : 'descr',
+                },
+            ],
+        },
+        Common.ExternalID : department.name,
+    )
 };
 
 annotate service.Spacefarers with {
-    position @Common.ValueList : {
-        $Type : 'Common.ValueListType',
-        CollectionPath : 'Positions',
-        Parameters : [
-            {
-                $Type : 'Common.ValueListParameterInOut',
-                LocalDataProperty : position_ID,
-                ValueListProperty : 'ID',
-            },
-            {
-                $Type : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty : 'name',
-            },
-            {
-                $Type : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty : 'descr',
-            },
-        ],
-    }
+    position @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Positions',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : position_ID,
+                    ValueListProperty : 'ID',
+                },
+                {
+                    $Type : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty : 'name',
+                },
+                {
+                    $Type : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty : 'descr',
+                },
+            ],
+        },
+        Common.ExternalID : position.name,
+    )
 };
 
