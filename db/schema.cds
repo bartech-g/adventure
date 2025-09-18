@@ -13,23 +13,23 @@ type positiveInteger : Integer @assert.range: [
 ];
 
 entity Departments : primary {
-    name      : String(255);
+    name      : String(255) @mandatory;
     descr     : String(255);
     employees : Association to many Spacefarers
                     on employees.department = $self;
 }
 
 entity Positions : primary {
-    name       : String(255);
+    name       : String(255) @mandatory;
     descr      : String(255);
     department : Association to Departments;
 }
 
 entity Spacefarers : primary {
-    firstName               : String(255);
-    lastName                : String(255);
-    stardustCollection      : positiveInteger;
-    wormholeNavigationSkill : positiveInteger;
+    firstName               : String(255) @mandatory;
+    lastName                : String(255) @mandatory;
+    stardustCollection      : positiveInteger default 0;
+    wormholeNavigationSkill : positiveInteger default 0;
     originPlanet            : String(255);
     spacesuitColor          : String(255);
     department              : Association to Departments;
