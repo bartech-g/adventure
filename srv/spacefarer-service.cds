@@ -62,7 +62,7 @@ service SpacefarerService {
     ]
     entity Spacefarers as projection on db.Spacefarers;
 
-    // create an event for onboarding a new spacefarer
+    // event for onboarding a new spacefarer
     event spacefarerOnboarded : {
         id     : UUID;
         name   : String;

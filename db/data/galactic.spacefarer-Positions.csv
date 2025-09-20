@@ -1,9 +1,4 @@
-ID,name,descr,department_ID,createdAt,createdBy,modifiedAt,modifiedBy
-a1,Navigator,Charts routes and wormholes,1
-a2,Helmsman,Pilots the ship,1
-b1,Astrophysicist,Studies cosmic phenomena,2
-b2,Biologist,Analyzes extraterrestrial life,2
-c1,Engineer,Maintains critical systems,3
-c2,Systems Technician,Diagnostics and repair,3
-d1,Communications Officer,Handles interstellar comms,4
-d2,Linguist,Translates alien languages,4
+ID,name,descr,department_ID
+22334455-6677-8899-aabb-ccddeeff0011,Captain,Ship commander,8b1f0d0a-1c2b-4b3c-9d9e-1a2b3c4d5e60
+1a2b3c4d-5e6f-7a8b-9c0d-112233445566,Science Officer,Leads science missions,f2cbb4f9-5a2e-4e73-8c9e-8ef7c2b0d111
+aa55aa55-aa55-aa55-aa55-aa55aa55aa55,Pilot,Flight operations,8b1f0d0a-1c2b-4b3c-9d9e-1a2b3c4d5e60
