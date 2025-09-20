@@ -4,6 +4,9 @@
   "description": "A simple CAP project.",
   "dependencies": {
     "@sap/cds": "^9",
+    "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
+    "@sapui5/ts-types": "^1.92.2",
+    "eslint": "^7.32.0",
     "express": "^4"
   },
   "devDependencies": {
@@ -12,7 +15,9 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-spacefarers-page": "cds watch --open spacefarers.spacefarerspage/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-spacefarers-page": "cds watch --open spacefarers.spacefarerspage/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-departments-page": "cds watch --open departments.departmentspage/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-positions-page": "cds watch --open positions.positionspage/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "cds": {
@@ -39,6 +44,9 @@
             ]
           }
         }
+      },
+      "messaging": {
+        "kind": "local-messaging"
       }
     }
   },
@@ -46,6 +54,8 @@
     "app/*"
   ],
   "sapux": [
-    "app/spacefarers-page"
+    "app/spacefarers-page",
+    "app/departments-page",
+    "app/positions-page"
   ]
 }

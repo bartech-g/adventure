@@ -1,5 +1,4 @@
 const cds = require("@sap/cds");
-const { message } = require("@sap/cds/lib/log/cds-error");
 
 class SpacefarerService extends cds.ApplicationService {
   async init() {
@@ -26,6 +25,10 @@ class SpacefarerService extends cds.ApplicationService {
         );
     });
 
+    this.on("spacefarerOnboarded", (msg) => {
+      cds.log("onboard").info("received event", msg.data);
+    });
+
     return super.init();
   }
 
@@ -35,10 +38,12 @@ class SpacefarerService extends cds.ApplicationService {
     const isPositive = (n) => typeof n === "number" && n > 0; // "positive numbers only"
 
     if (!isPositive(stardustCollection)) {
+      hasErrors = true;
       req.error("POSITIVE_INT_VALIDATION_ERROR", ["stardustCollection"]);
     }
 
     if (!isPositive(wormholeNavigationSkill)) {
+      hasErrors = true;
       req.error({
         status: 400,
         code: "POSITIVE_INT_VALIDATION_ERROR",
