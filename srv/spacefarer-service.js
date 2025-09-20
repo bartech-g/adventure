@@ -32,31 +32,22 @@ class SpacefarerService extends cds.ApplicationService {
   #validateSpacefarer(req) {
     const { stardustCollection, wormholeNavigationSkill } = req.data || {};
 
-    // const violations = [];
     const isPositive = (n) => typeof n === "number" && n > 0; // "positive numbers only"
 
     if (!isPositive(stardustCollection)) {
-      return req.error("POSITIVE_INT_VALIDATION_ERROR", ["stardustCollection"]);
+      req.error("POSITIVE_INT_VALIDATION_ERROR", ["stardustCollection"]);
     }
-    // violations.push("stardustCollection (> 0)");
+
     if (!isPositive(wormholeNavigationSkill)) {
-      return req.error({
+      req.error({
         status: 400,
         code: "POSITIVE_INT_VALIDATION_ERROR",
         message: "POSITIVE_INT_VALIDATION_ERROR",
         target: "wormholeNavigationSkill",
         args: ["wormholeNavigationSkill"],
       });
+      req.reject(400, "POSITIVE_INT_VALIDATION_ERROR");
     }
-
-    // violations.push("wormholeNavigationSkill (> 0)");
-
-    // if (violations.length) {
-    //   throw new cds.error(`Invalid input for ${violations.join(", ")}.`, {
-    //     code: "VALIDATION_ERROR",
-    //     status: 400,
-    //   });
-    // }
   }
 
   #congratulate(data, req) {
