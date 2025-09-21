@@ -26,6 +26,10 @@ npm install
 ## 3) Start CAP backend (loads CSVs into a local SQLite DB)
 
 ```bash
+cds deploy
+```
+
+```bash
 cds watch
 ```
 
