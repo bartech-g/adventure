@@ -103,6 +103,7 @@
             "settings": {
               "contextPath": "/Positions",
               "variantManagement": "Page",
+              "initialLoad": true,
               "navigation": {
                 "Positions": {
                   "detail": {

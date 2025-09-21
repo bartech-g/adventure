@@ -55,38 +55,43 @@ annotate service.Spacefarers with @(
     UI.LineItem                  : [
         {
             $Type: 'UI.DataField',
-            Label: 'firstName',
+            Label: 'First Name',
             Value: firstName,
         },
         {
             $Type: 'UI.DataField',
-            Label: 'lastName',
+            Label: 'Last Name',
             Value: lastName,
         },
         {
             $Type: 'UI.DataField',
-            Label: 'stardustCollection',
-            Value: stardustCollection,
+            Label: 'Stardust Collection',
+            Value: stardustCollection
         },
         {
             $Type: 'UI.DataField',
-            Label: 'wormholeNavigationSkill',
+            Label: 'Wormhole Navigation Skill',
             Value: wormholeNavigationSkill,
         },
         {
             $Type: 'UI.DataField',
-            Label: 'originPlanet',
+            Label: 'Spacesuit Color',
+            Value: spacesuitColor,
+        },
+        {
+            $Type: 'UI.DataField',
+            Label: 'Origin Planet',
             Value: originPlanet,
         },
         {
             $Type: 'UI.DataField',
             Value: department_ID,
-            Label: 'department',
+            Label: 'Department',
         },
         {
             $Type: 'UI.DataField',
             Value: position_ID,
-            Label: 'position',
+            Label: 'Position',
         },
     ],
 );
@@ -104,7 +109,7 @@ annotate service.Spacefarers with {
                 },
                 {
                     $Type            : 'Common.ValueListParameterDisplayOnly',
-                    ValueListProperty: 'name',
+                    ValueListProperty: 'name'
                 },
                 {
                     $Type            : 'Common.ValueListParameterDisplayOnly',
@@ -137,6 +142,6 @@ annotate service.Spacefarers with {
                 },
             ],
         },
-        Common.ExternalID: position.name,
+        Common.ExternalID: position.name
     )
 };
