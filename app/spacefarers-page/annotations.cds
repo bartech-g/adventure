@@ -97,46 +97,51 @@ annotate service.Spacefarers with @(
 );
 
 annotate service.Spacefarers with {
-    department @(Common.ValueList: {
-        $Type         : 'Common.ValueListType',
-        CollectionPath: 'Departments',
-        Parameters    : [
-            {
-                $Type            : 'Common.ValueListParameterInOut',
-                LocalDataProperty: department_ID,
-                ValueListProperty: 'ID',
-            },
-            {
-                $Type            : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty: 'name',
-                Label            : 'Department Name',
-            },
-            {
-                $Type            : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty: 'descr',
-            },
-        ],
-    })
+    department @(
+        Common.ValueList : {
+            $Type         : 'Common.ValueListType',
+            CollectionPath: 'Departments',
+            Parameters    : [
+                {
+                    $Type            : 'Common.ValueListParameterInOut',
+                    LocalDataProperty: department_ID,
+                    ValueListProperty: 'ID',
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'name'
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'descr',
+                },
+            ],
+        },
+        Common.ExternalID: department.name,
+    )
 };
 
 annotate service.Spacefarers with {
-    position @(Common.ValueList: {
-        $Type         : 'Common.ValueListType',
-        CollectionPath: 'Positions',
-        Parameters    : [
-            {
-                $Type            : 'Common.ValueListParameterInOut',
-                LocalDataProperty: position_ID,
-                ValueListProperty: 'ID',
-            },
-            {
-                $Type            : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty: 'name',
-            },
-            {
-                $Type            : 'Common.ValueListParameterDisplayOnly',
-                ValueListProperty: 'descr',
-            },
-        ],
-    })
+    position @(
+        Common.ValueList : {
+            $Type         : 'Common.ValueListType',
+            CollectionPath: 'Positions',
+            Parameters    : [
+                {
+                    $Type            : 'Common.ValueListParameterInOut',
+                    LocalDataProperty: position_ID,
+                    ValueListProperty: 'ID',
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'name',
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'descr',
+                },
+            ],
+        },
+        Common.ExternalID: position.name
+    )
 };
