@@ -26,10 +26,10 @@ entity Positions : primary {
 }
 
 entity Spacefarers : primary {
-    firstName               : String(255) @mandatory;
-    lastName                : String(255) @mandatory;
-    stardustCollection      : positiveInteger default 1;
-    wormholeNavigationSkill : Integer;
+    firstName               : String(255)               @mandatory;
+    lastName                : String(255)               @mandatory;
+    stardustCollection      : positiveInteger default 1 @mandatory;
+    wormholeNavigationSkill : Integer                   @mandatory;
     originPlanet            : String(255);
     spacesuitColor          : String(255);
     department              : Association to Departments;
