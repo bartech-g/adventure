@@ -103,6 +103,7 @@
             "settings": {
               "contextPath": "/Departments",
               "variantManagement": "Page",
+              "initialLoad": true,
               "navigation": {
                 "Departments": {
                   "detail": {
